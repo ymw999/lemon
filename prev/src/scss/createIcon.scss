@@ -1,0 +1,107 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrapper {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(14px);
+}
+
+header {
+    font-size: pxTorem(14px);
+    background: #ffe141;
+    padding: pxTorem(10px) pxTorem(15px);
+    .mui-bar-nav-top {
+        width: 100%;
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        a {
+            color: #000;
+        }
+        img {
+            width: pxTorem(90px);
+            height: pxTorem(35px);
+        }
+        .mui-nav-top {
+            @include box_flex;
+            @include justify(space-between);
+            @include align;
+            font-size: pxTorem(18px);
+            margin-left: pxTorem(40px);
+            font-weight: 600;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    flex: 1;
+    .mui-section-top {
+        width: 100%;
+        padding: pxTorem(15px);
+        @include sizing;
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        .mui-icon {
+            width: pxTorem(50px);
+            height: pxTorem(50px);
+            @include box_flex;
+            @include justify(center);
+            @include align;
+            border-radius: 50%;
+            background: #ffe141;
+        }
+        input {
+            flex: 1;
+            text-align: right;
+            font-size: pxTorem(16px);
+        }
+        input::-webkit-input-placeholder {
+            font-size: pxTorem(16px);
+        }
+    }
+    .mui-slider-item {
+        width: 100%;
+        height: 100%;
+        padding: pxTorem(15px);
+        @include sizing;
+        div {
+            width: 100%;
+            @include box_flex;
+            @include flexWrap(wrap);
+            // @include justify(space-around);
+            div {
+                width: pxTorem(50px);
+                height: pxTorem(50px);
+                @include box_flex;
+                @include justify(center);
+                @include align;
+                border-radius: 50%;
+                background: #ffe141;
+                margin-left: pxTorem(13px);
+                margin-right: pxTorem(13px);
+                margin-bottom: pxTorem(20px);
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(40px);
+    @include box_flex;
+    @include justify(center);
+    @include align;
+    button {
+        width: 80%;
+        height: pxTorem(40px);
+        background: #ffe141;
+        color: #fff;
+        border-radius: pxTorem(20px);
+        border: 0;
+        font-size: pxTorem(16px);
+    }
+}

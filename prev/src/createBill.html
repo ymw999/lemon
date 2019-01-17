@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/createBill.css">
+    <link rel="stylesheet" href="./css/mui.picker.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="mui-bar-nav-top">
+                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+                <div class="mui-nav-top">
+                    <span class="span_active " data-type="expenditure">支出</span>
+                    <span data-type="income">收入</span>
+                    <span>转账</span>
+                </div>
+                <img src="images/tou2_03.gif" alt="">
+            </div>
+            <form action="">
+                <input type="text" placeholder="0.00" id="moneys">
+            </form>
+        </header>
+        <section>
+            <div class="mui-slider">
+                <div class="mui-slider-group">
+                    <!-- <div class="mui-slider-item">
+                        <div>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-map"></span>
+								</dt>
+                                <dd>红</dd>
+                            </dl>
+                            <dl>
+                                <dt>
+									<span class="mui-icon mui-icon-weixin"></span>
+								</dt>
+                                <dd>自定义</dd>
+                            </dl>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="mui-section-date">
+                <div id="getdate">
+                    <img src="./images/date_03.gif" alt="">
+                    <span>1月10日</span>
+                </div>
+                <div>
+                    <p class="mui-icon mui-icon-spinner mui-spin"></p>
+                    <span>个人账单</span>
+                </div>
+                <div>
+                    <p class="mui-icon mui-icon-spinner mui-spin"></p>
+                    <span>不选账户</span>
+                </div>
+            </div>
+            <div id="count">
+                <ul class="mui-count-left">
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>.</li>
+                    <li>0</li>
+                    <li>X</li>
+                </ul>
+                <div class="mui-count-save">
+                    <ul>
+                        <li>+</li>
+                        <li>-</li>
+                        <li>*</li>
+                        <li>/</li>
+                    </ul>
+                    <button id="save">完成</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/mui.js"></script>
+    <script src="./js/mui.picker.min.js"></script>
+    <script src="./js/page/createBill.js"></script>
+</body>
+
+</html>

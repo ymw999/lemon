@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/mui.picker.min.css">
+    <!-- <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script> -->
+</head>
+
+<body>
+
+    <!-- 侧滑导航根容器 -->
+    <div class="mui-off-canvas-wrap mui-draggable mui-slide-in" id="mui-off-canvas-wrap">
+        <!-- 菜单容器 -->
+        <aside class="mui-off-canvas-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 菜单具体展示内容 -->
+                    <div class="mui-type">
+                        <h4>收支类型</h4>
+                        <ul class="mui-list" id="mui-list">
+                            <li data-type="income">全部收入</li>
+                            <li data-type="expenditure">全部支出</li>
+                            <li>全部其他</li>
+                        </ul>
+                    </div>
+                    <div class="mui-type" id="mui-type">
+                        <h4>收支分类</h4>
+                        <ul class="mui-list" id="mui-expenditure">
+                            <!-- <li>爬山</li>
+                            <li>吃饭</li>
+                            <li>水果</li> -->
+                        </ul>
+                        <ul class="mui-list" id="mui-income">
+                            <!-- <li>薪资</li>
+                            <li>意外收获</li> -->
+                        </ul>
+                    </div>
+                    <div class="button">
+                        <button id="reset">重置</button>
+                        <button id="sure">确定</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 主页面标题 -->
+            <header class="mui-bar mui-bar-nav">
+                <div class="header-top">
+                    <img src="./images/tou_03.gif" alt="">
+                    <h1>柠檬记账</h1>
+                    <img src="./images/tou2_03.gif" alt="">
+                </div>
+                <div class="header-center">
+                    <p>年花费(元)</p>
+                    <div class="year">
+                        <p id="sel1"><b>月</b><span class="mui-icon mui-icon-arrowdown"></span></p>
+                        <p id="sel2"><b>2019-01</b><span class="mui-icon mui-icon-arrowdown"></span></p>
+                    </div>
+                </div>
+                <h2><span>56165</span>.00</h2>
+                <div class="header-bottom">
+                    <p>年收入:<span>15223</span></p>
+                    <p>年支出:<span>1651</span></p>
+                </div>
+            </header>
+            <div class="content">
+                <div class="content_top">
+                    <div class="flex-container">
+                        <img src="./images/过滤_03.gif" alt="" id="but">
+                    </div>
+                    <div class="list" id="bill_click">
+                        <p class="p-active" data-id="0">账单</p>
+                        <p data-id="1">图表</p>
+                    </div>
+                    <div class="flex-container">
+                        <a><span class="mui-icon mui-icon-search"></span></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 主界面具体展示内容 -->
+                    <div class="mui-bill-year" id="mui-bill-year">
+                        <!-- 按年显示账单-->
+                        <!-- <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-collapse">
+                                <a class="mui-navigate-right" href="#">
+                                    <div class="mui-top">
+                                        <p>
+                                            <img src="./images/date_03.gif" alt="">
+                                            <span>10月</span>
+                                        </p>
+                                        <div class="mui-top-content">
+                                            <dl>
+                                                <dt>花费</dt>
+                                                <dd>64165.00</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>收入</dt>
+                                                <dd>64165.00</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>结余</dt>
+                                                <dd>64165.00</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div id="Billlist">
+                                    <ul id="OA_task_1" class="mui-table-view">
+                                        <li class="mui-table-view-cell">
+                                            <div class="mui-slider-right mui-disabled">
+                                                <a class="mui-btn mui-btn-red">删除</a>
+                                            </div>
+                                            <div class="mui-slider-handle">
+                                                <div class="mui-contents">
+                                                    <dl>
+                                                        <dt>
+                                                            <a><span class="mui-icon mui-icon-camera"></span></a>
+                                                        </dt>
+                                                        <dd>
+                                                            <div>
+                                                                <p>奖金</p>
+                                                                <p>10月20日</p>
+                                                            </div>
+                                                            <b class="income">9665.00</b>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div class="mui-bill-month" id="mui-bill-month">
+                        <!-- 按月显示账单-->
+                        <!-- <div class="date">
+                            <p>
+                                <img src="./images/date_03.gif" alt="">
+                                <span>01月07日</span>
+                            </p>
+                            <p>
+                                <b>支出</b>
+                                <span>651563.00</span>
+                            </p>
+                        </div>
+                        <ul id="OA_task_1" class="mui-table-view">
+                            <li class="mui-table-view-cell">
+                                <div class="mui-slider-right mui-disabled">
+                                    <a class="mui-btn mui-btn-red">删除</a>
+                                </div>
+                                <div class="mui-slider-handle">
+                                    <div class="mui-contents">
+                                        <dl>
+                                            <dt>
+                                                <a><span class="mui-icon mui-icon-camera"></span></a>
+                                            </dt>
+                                            <dd>
+                                                <p>爬山</p>
+                                                <b class="expenditure">9665.00</b>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div class="mui-bill-chart">
+                        <!-- 图表样式显示账单-->
+                        图表
+                    </div>
+                </div>
+            </div>
+            <div class="mui-off-canvas-backdrop">
+                <div class="bottom" id="bottom">
+                    <div class="round">
+                        <p>+</p>
+                    </div>
+                </div>
+                <dl>
+                    <dt>
+                        <img src="./images/shouye_03.gif" alt="">
+                    </dt>
+                    <dd>首页</dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="./images/quanzi_05.gif" alt="">
+                    </dt>
+                    <dd>圈子</dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="./images/faxian_07.gif" alt="">
+                    </dt>
+                    <dd>发现</dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="./images/wode_09.gif" alt="">
+                    </dt>
+                    <dd>我的</dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./js/mui.picker.min.js"></script>
+<script src="./js/moment.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

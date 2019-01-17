@@ -1,0 +1,467 @@
+@import "common.scss";
+@import "_mixin.scss";
+.mui-inner-wrap {
+    // width: 100%;
+    // height: 100%;
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(12px);
+    color: #000;
+    background: #fff;
+}
+
+.mui-bar-nav {
+    width: 100%;
+    height: auto;
+    background: #ffe141;
+    .header-top {
+        width: 100%;
+        height: pxTorem(40px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        img:nth-child(1) {
+            width: pxTorem(30px);
+            height: pxTorem(30px);
+        }
+        h1 {
+            font-size: pxTorem(16px);
+            font-weight: 600;
+            margin-left: pxTorem(15px);
+        }
+        img:nth-child(3) {
+            width: pxTorem(80px);
+            height: pxTorem(30px);
+        }
+    }
+    .header-center {
+        width: 100%;
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        p {
+            color: #000;
+        }
+        .year {
+            @include box_flex;
+            @include align;
+            font-weight: 600;
+            p {
+                color: #000;
+                padding: 0 pxTorem(10px);
+                border: pxTorem(1px) solid #333;
+                border-radius: pxTorem(20px);
+                margin-right: pxTorem(10px);
+                height: pxTorem(25px);
+                @include box_flex;
+                @include justify(center);
+                @include align;
+                .mui-icon-arrowdown {
+                    font-size: pxTorem(14px);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    h2 {
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        font-size: pxTorem(13px);
+        span {
+            font-size: pxTorem(25px);
+            font-weight: 600;
+        }
+    }
+    .header-bottom {
+        width: 100%;
+        height: pxTorem(40px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        p {
+            color: #000;
+        }
+    }
+}
+
+.content {
+    position: relative;
+    top: pxTorem(134px);
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    .content_top {
+        width: 100%;
+        height: pxTorem(40px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        background: #fff;
+        .flex-container {
+            width: pxTorem(24px);
+            height: pxTorem(24px);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .list {
+            @include box_flex;
+            @include justify(space-between);
+            @include align;
+            font-size: pxTorem(14px);
+            border: pxTorem(1px) solid #333;
+            border-radius: pxTorem(20px);
+            overflow: hidden;
+            p {
+                padding: pxTorem(5px) pxTorem(10px);
+            }
+            p:nth-child(1) {
+                border-right: pxTorem(1px) solid #333;
+            }
+            .p-active {
+                background: #ffe141;
+                color: #333;
+            }
+        }
+        .mui-icon-search {
+            color: #333;
+        }
+    }
+}
+
+.mui-scroll-wrapper {
+    top: pxTorem(130px);
+    height: pxTorem(560px);
+    .mui-scroll {
+        background: #fff;
+        .mui-bill-year {
+            //年账单
+            width: 100%;
+            // display: none;
+            .mui-table-view {
+                width: 100%;
+                background: #fff;
+                .mui-table-view-cell {
+                    width: 100%;
+                    background: #fff;
+                    .mui-top {
+                        width: 100%;
+                        @include box_flex;
+                        @include justify(space-between);
+                        @include align;
+                        p {
+                            @include box_flex;
+                            @include align;
+                            width: pxTorem(60px);
+                            color: #000;
+                            img {
+                                width: pxTorem(18px);
+                                height: pxTorem(18px);
+                            }
+                        }
+                        .mui-top-content {
+                            flex: 1;
+                            @include box_flex;
+                            @include justify(space-between);
+                            @include align;
+                            >dl {
+                                flex: 1;
+                                @include box_flex;
+                                @include direction(column);
+                                @include justify(space-between);
+                                @include align;
+                            }
+                            dl:nth-child(1) {
+                                color: red;
+                            }
+                            dl:nth-child(2) {
+                                color: green;
+                            }
+                            dl:nth-child(3) {
+                                color: #666;
+                            }
+                        }
+                    }
+                    div {
+                        width: 100%;
+                        .mui-table-view {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            padding-inline-start: 0px;
+                            .mui-table-view-cell {
+                                width: 100%;
+                                padding: 0;
+                                .mui-btn {
+                                    transform: translate(-200px, 0px);
+                                }
+                                .mui-slider-handle {
+                                    width: 100%;
+                                    .mui-contents {
+                                        width: 100%;
+                                        margin: 0;
+                                        padding: 0;
+                                        >dl {
+                                            width: 100%;
+                                            height: pxTorem(60px);
+                                            @include box_flex;
+                                            @include align;
+                                            padding: 0 pxTorem(15px);
+                                            @include sizing;
+                                            // border-bottom: pxTorem(1px) solid #ccc;
+                                            dt {
+                                                width: pxTorem(40px);
+                                                height: pxTorem(40px);
+                                                border-radius: 50%;
+                                                background: #ffe141;
+                                                @include box_flex;
+                                                @include justify(center);
+                                                @include align;
+                                                margin-right: pxTorem(10px);
+                                                span {
+                                                    color: #000;
+                                                }
+                                            }
+                                            dd {
+                                                flex: 1;
+                                                @include box_flex;
+                                                @include justify(space-between);
+                                                @include align;
+                                                font-size: pxTorem(14px);
+                                                p {
+                                                    color: #000;
+                                                }
+                                                b {
+                                                    font-size: pxTorem(20px);
+                                                    font-weight: 600;
+                                                }
+                                                .income {
+                                                    color: green;
+                                                }
+                                                .expenditure {
+                                                    color: red;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mui-bill-month {
+            //月账单
+            width: 100%;
+            .date {
+                width: 100%;
+                height: pxTorem(40px);
+                @include box_flex;
+                @include justify(space-between);
+                @include align;
+                padding: 0 pxTorem(15px);
+                @include sizing;
+                background: #fff;
+                p {
+                    @include box_flex;
+                    @include align;
+                    img {
+                        width: pxTorem(20px);
+                        height: pxTorem(20px);
+                        margin-right: pxTorem(5px);
+                    }
+                }
+            }
+            .mui-contents {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                >dl {
+                    width: 100%;
+                    height: pxTorem(60px);
+                    @include box_flex;
+                    @include align;
+                    padding: 0 pxTorem(15px);
+                    @include sizing;
+                    // border-bottom: pxTorem(1px) solid #ccc;
+                    dt {
+                        width: pxTorem(40px);
+                        height: pxTorem(40px);
+                        border-radius: 50%;
+                        background: #ffe141;
+                        @include box_flex;
+                        @include justify(center);
+                        @include align;
+                        margin-right: pxTorem(10px);
+                        span {
+                            color: #000;
+                        }
+                    }
+                    dd {
+                        flex: 1;
+                        @include box_flex;
+                        @include justify(space-between);
+                        @include align;
+                        font-size: pxTorem(14px);
+                        p {
+                            color: #000;
+                        }
+                        b {
+                            font-size: pxTorem(20px);
+                            font-weight: 600;
+                        }
+                        .income {
+                            color: green;
+                        }
+                        .expenditure {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .mui-bill-chart {
+            //图表
+            display: none;
+        }
+    }
+}
+
+//底部样式
+.mui-off-canvas-backdrop {
+    width: 100%;
+    height: pxTorem(50px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include box_flex;
+    @include justify(space-around);
+    @include align;
+    border-top: 1px solid #ccc;
+    padding-top: pxTorem(5px);
+    box-sizing: border-box;
+    z-index: 99;
+    background: #fff;
+    dl {
+        dt {
+            text-align: center;
+            img {
+                width: pxTorem(20px);
+            }
+        }
+        dd {
+            font-size: pxTorem(14px);
+        }
+    }
+}
+
+//侧边栏样式
+.mui-off-canvas-wrap {
+    font-size: pxTorem(14px);
+    height: 100%;
+    width: 100%;
+    .mui-off-canvas-left {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .4);
+        .mui-scroll-wrapper {
+            width: 70%;
+            height: 100%;
+            background: hsl(0, 7%, 97%);
+            top: 0;
+            padding: pxTorem(10px);
+            @include sizing;
+            .mui-scroll {
+                background: hsl(0, 7%, 97%);
+                width: 100%;
+                .mui-type {
+                    width: 100%;
+                    h4 {
+                        border-left: 2px solid yellow;
+                        padding-left: pxTorem(15px);
+                        @include sizing;
+                    }
+                    .mui-list {
+                        @include box-flex;
+                        @include flexWrap(wrap);
+                        margin: pxTorem(20px) 0;
+                        li {
+                            padding: pxTorem(3px) pxTorem(10px);
+                            @include sizing;
+                            border-radius: pxTorem(15px);
+                            border: pxTorem(1px) solid #333;
+                            margin-right: pxTorem(10px);
+                            margin-top: pxTorem(5px);
+                        }
+                        .mui-active {
+                            border-color: #ffe141;
+                        }
+                    }
+                }
+                .button {
+                    width: 100%;
+                    @include box_flex;
+                    @include justify(space-around);
+                    @include align;
+                    margin-top: pxTorem(20px);
+                    button {
+                        padding: pxTorem(4px) pxTorem(15px);
+                        @include sizing;
+                        border: 0;
+                        border-radius: pxTorem(15px);
+                        color: #fff;
+                    }
+                    button:nth-child(1) {
+                        background: #666;
+                    }
+                    button:nth-child(2) {
+                        background: hsl(51, 94%, 49%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+element.style {
+    transform: translate(-88px, 0px);
+}
+
+#bottom {
+    position: fixed;
+    bottom: pxTorem(35px);
+    left: 50%;
+    z-index: 9999999;
+    width: pxTorem(80px);
+    border-radius: 50%;
+    background: #fff;
+    height: pxTorem(80px);
+    @include box_flex;
+    @include justify(center);
+    @include align;
+    margin-left: pxTorem(-40px);
+    .round {
+        width: pxTorem(60px);
+        border-radius: 50%;
+        background: yellow;
+        height: pxTorem(60px);
+        @include box_flex;
+        @include justify(center);
+        @include align;
+        p {
+            font-size: pxTorem(50px);
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}

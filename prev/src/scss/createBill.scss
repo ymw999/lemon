@@ -1,0 +1,187 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrapper {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(14px);
+}
+
+header {
+    font-size: pxTorem(14px);
+    background: #ffe141;
+    padding: pxTorem(5px) pxTorem(15px);
+    .mui-bar-nav-top {
+        width: 100%;
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        a {
+            color: #000;
+        }
+        img {
+            width: pxTorem(90px);
+            height: pxTorem(35px);
+        }
+        .mui-nav-top {
+            @include box_flex;
+            @include justify(space-between);
+            @include align;
+            border-radius: pxTorem(20px);
+            border: 1px solid #000;
+            overflow: hidden;
+            margin-left: pxTorem(50px);
+            span {
+                flex: 1;
+                padding: pxTorem(3px) pxTorem(8px);
+                @include sizing;
+                border-right: 1px solid #000;
+            }
+            .span_active {
+                background: #000;
+                color: #ffe141;
+            }
+        }
+    }
+    form {
+        height: pxTorem(50px);
+        border: 0;
+        padding: 0;
+        border-bottom: 1px solid #000;
+        margin: pxTorem(10px) 0;
+        background: #ffe141;
+        input {
+            border: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffe141;
+            border-radius: 0;
+            font-size: pxTorem(22px);
+            margin-bottom: 0;
+            text-align: center;
+        }
+        input::-webkit-input-placeholder {
+            font-size: pxTorem(22px);
+            color: #000;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    background: #fff;
+    .mui-slider {
+        height: pxTorem(220px);
+        .mui-slider-item {
+            height: 100%;
+            div {
+                width: 100%;
+                height: 100%;
+                @include box_flex;
+                @include flexWrap(wrap);
+                dl {
+                    width: 25%;
+                    height: pxTorem(100px);
+                    @include box_flex;
+                    @include justify(center);
+                    @include align;
+                    @include direction(column);
+                    margin-top: pxTorem(10px);
+                    dt {
+                        width: pxTorem(50px);
+                        height: pxTorem(50px);
+                        @include box_flex;
+                        @include justify(center);
+                        @include align;
+                        border-radius: 50%;
+                        background: rgba(0, 0, 0, .1);
+                        span {
+                            display: block;
+                            font-weight: 600;
+                        }
+                    }
+                    dd {
+                        margin-top: pxTorem(10px);
+                    }
+                }
+                .dl_active {
+                    dt {
+                        background: #ffe141;
+                    }
+                    dd {
+                        color: #ffe141;
+                    }
+                }
+            }
+        }
+    }
+    .mui-section-date {
+        width: 100%;
+        height: pxTorem(80px);
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        padding: 0 pxTorem(15px);
+        div {
+            @include box_flex;
+            @include align;
+            img {
+                width: pxTorem(20px);
+                height: pxTorem(20px);
+            }
+            p {
+                font-size: pxTorem(16px);
+                margin-right: pxTorem(5px);
+            }
+        }
+    }
+    #count {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: pxTorem(230px);
+        @include box_flex;
+        padding: 0 pxTorem(15px);
+        @include sizing;
+        font-size: pxTorem(16px);
+        .mui-count-left {
+            flex: 1;
+            height: 100%;
+            @include box_flex;
+            @include flexWrap(wrap);
+            li {
+                width: 33.3%;
+                @include box_flex;
+                @include justify(center);
+                @include align;
+                border: 1px solid #ccc;
+            }
+        }
+        .mui-count-save {
+            width: 25%;
+            height: 100%;
+            ul {
+                @include box_flex;
+                @include flexWrap(wrap);
+                width: 100%;
+                height: 50%;
+                li {
+                    width: 50%;
+                    @include box_flex;
+                    @include justify(center);
+                    @include align;
+                    border: 1px solid #ccc;
+                }
+            }
+            button {
+                width: 100%;
+                height: 50%;
+                background: #ffe141;
+                border: 0;
+            }
+        }
+    }
+}
